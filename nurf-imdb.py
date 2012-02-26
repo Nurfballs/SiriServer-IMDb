@@ -135,7 +135,7 @@ class nurf_imdb(Plugin):
             
             else:
                 
-                self.say("Here you go:")
+                self.say("Let me look that up for you.")
                 view = AddViews(self.refId, dialogPhase="Completion")
                 
                 # -- Get Movie Info --
@@ -188,7 +188,7 @@ class nurf_imdb(Plugin):
             
                 # -- Results --
                 #Display the results
-                view1 = AnswerSnippet(answers=[NurfIMDBAnswerPosterURL, NurfIMDBAnswerRating, NurfIMDBAnswerDirectors,  NurfIMDBAnswerWriters,  NurfIMDBAnswerCast])
+                view1 = AnswerSnippet(answers=[NurfIMDBAnswerPosterURL, NurfIMDBAnswerRating, NurfIMDBAnswerPlot, NurfIMDBAnswerDirectors,  NurfIMDBAnswerWriters,  NurfIMDBAnswerCast])
                 view.views = [view1]
                 self.sendRequestWithoutAnswer(view)
                 self.complete_request()
