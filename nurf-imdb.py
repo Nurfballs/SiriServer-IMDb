@@ -44,7 +44,7 @@ try:
    from imdb import IMDb
    import imdb.helpers
 except ImportError:
-   raise NecessaryModuleNotFound("IMDb library not found. Please install IMDbPy library! e.g. sudo easy_install IMDbPy (or sudo apt-get install python-imdbpy)")
+   raise NecessaryModuleNotFound("Oops! Unable to locate the IMDb library. Please install IMDbPy. e.g. (sudo easy_install IMDbPy) or (sudo apt-get install python-imdbpy)")
 
 class nurf_imdb(Plugin):
 
