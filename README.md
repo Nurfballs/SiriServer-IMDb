@@ -11,7 +11,7 @@ Pre-requisites
 1. A working installation of SiriServer.
 2. IMDbPy
 
-The installation and configuraiton of the SiriServer is outside the scope of this readme. 
+*The installation and configuraiton of the SiriServer is outside the scope of this readme.*
 
 
 Installation
