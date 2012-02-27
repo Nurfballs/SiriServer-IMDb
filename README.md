@@ -36,7 +36,7 @@ This script supports the following functions
 
 Listen String: `(movie lookup)* ([\w ]+)`
 
-Example: say `Movie lookup The Matrix"` etc.
+Example: say `Movie lookup The Matrix` etc.
 
 [Screenshot](http://i.imgur.com/56tcal.png "Screenshot")
 
