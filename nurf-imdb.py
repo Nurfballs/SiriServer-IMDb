@@ -192,4 +192,27 @@ class nurf_imdb(Plugin):
                 view.views = [view1]
                 self.sendRequestWithoutAnswer(view)
                 self.complete_request()
-            
+    
+    @register("en-US", "(should i see|should i watch)* ([\w ]+)") 
+    def get_director(self, speech, language,  regex):
+        if language == "en-US":
+            MovieTitle = regex.group(regex.lastindex).strip()
+            ia = IMDb()
+            search_result = ia.search_movie(MovieTitle)
+            if not search_result:
+                self.say("Sorry, I could not find any information for " + MovieTitle)
+                self.complete_request()
+                
+            else:
+                movie_info = search_result[0]
+                ia.update(movie_info)    
+                MovieRating = movie_info['rating']
+                
+                if (MovieRating < 6):
+                    self.say("Rating: " + str(MovieRating) + " out of 10. You probably should not see this movie.")
+                elif (MovieRating < 8):
+                    self.say("Rating: " + str(MovieRating) + " out of 10. I recommend you see this movie.")
+                elif (MovieRating >= 8):
+                    self.say("Rating: " + str(MovieRating) + " out of 10. This movie is a must-see!")
+                self.complete_request()
+    
