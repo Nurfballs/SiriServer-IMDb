@@ -30,6 +30,7 @@ This script supports the following functions
 * Get information about a movie
 * Lookup director of a movie
 * Lookup actor by role (works for TV shows too!)
+* Recommend seeing a movie
 
 
 **Get information about a movie**
@@ -55,6 +56,14 @@ Listen String: `(who played|who plays|who was)* ([\w ]+) *in* ([\w ]+)`
 Example: say `Who played Morpheus in The Matrix` etc.
 
 [Screenshot](http://i.imgur.com/XrNqLl.png "Screenshot")
+
+**Recommend seeing a movie**
+
+Listen String: `(should i see|should i watc)* ([\w ]+)`
+
+Example: say `Should I see The Matrix?` etc.
+
+
 
 
 Version History
