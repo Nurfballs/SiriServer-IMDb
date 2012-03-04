@@ -59,7 +59,7 @@ Example: say `Who played Morpheus in The Matrix` etc.
 
 **Recommend seeing a movie**
 
-Listen String: `(should i see|should i watc)* ([\w ]+)`
+Listen String: `(should i see|should i watch)* ([\w ]+)`
 
 Example: say `Should I see The Matrix?` etc.
 
