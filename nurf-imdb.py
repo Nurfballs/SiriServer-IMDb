@@ -51,8 +51,11 @@ class nurf_imdb(Plugin):
     @register("en-US", "(who directed)* ([\w ]+)") 
     def get_director(self, speech, language,  regex):
         if language == "en-US":
+            #Get name of the movie title
             MovieTitle = regex.group(regex.lastindex).strip()
             ia = IMDb()
+            
+            #Look it up
             search_result = ia.search_movie(MovieTitle)
             if not search_result:
                 self.say("Sorry, I could not find any information for " + MovieTitle)
@@ -62,7 +65,9 @@ class nurf_imdb(Plugin):
                 movie_info = search_result[0]
                 ia.update(movie_info)
                 
+                #Get full title
                 strFullTitle = movie_info['title']
+                #Get director
                 strDirector = movie_info['director'][0]['name']
                 
                 self.say(strDirector + " directed "+ strFullTitle)
@@ -206,13 +211,17 @@ class nurf_imdb(Plugin):
             else:
                 movie_info = search_result[0]
                 ia.update(movie_info)    
-                MovieRating = movie_info['rating']
-                
-                if (MovieRating < 6):
-                    self.say("Rating: " + str(MovieRating) + " out of 10. You probably should not see this movie.")
-                elif (MovieRating < 8):
-                    self.say("Rating: " + str(MovieRating) + " out of 10. I recommend you see this movie.")
-                elif (MovieRating >= 8):
-                    self.say("Rating: " + str(MovieRating) + " out of 10. This movie is a must-see!")
-                self.complete_request()
+                                
+                try:
+                    MovieRating = movie_info['rating']
+                    if (MovieRating < 6):
+                        self.say("Rating: " + str(MovieRating) + " out of 10. You probably should not see this movie.")
+                    elif (MovieRating < 8):
+                        self.say("Rating: " + str(MovieRating) + " out of 10. I recommend you see this movie.")
+                    elif (MovieRating >= 8):
+                        self.say("Rating: " + str(MovieRating) + " out of 10. This movie is a must-see!")
+                    self.complete_request()
+                except:
+                    self.say("Sorry. This movie has not yet been rated.")
+                    self.complete_request()
     
