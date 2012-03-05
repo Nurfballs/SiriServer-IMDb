@@ -30,7 +30,7 @@ This script supports the following functions
 * Get information about a movie
 * Lookup director of a movie
 * Lookup actor by role (works for TV shows too!)
-* Recommend seeing a movie
+* Recommend seeing a movie based on ratings
 
 
 **Get information about a movie**
@@ -68,6 +68,9 @@ Example: say `Should I see The Matrix?` etc.
 
 Version History
 ----------------
+**0.2**
+
+* Added recommendation of a movie based on ratings.
 
 **0.1**
 
