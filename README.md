@@ -63,6 +63,7 @@ Listen String: `(should i see|should i watch)* ([\w ]+)`
 
 Example: say `Should I see The Matrix?` etc.
 
+[Screenshot](http://i.imgur.com/CIP8Ul.png "Screenshot")
 
 
 
