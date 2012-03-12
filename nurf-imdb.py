@@ -199,7 +199,7 @@ class nurf_imdb(Plugin):
                 self.complete_request()
     
     @register("en-US", "(should i see|should i watch)* ([\w ]+)") 
-    def get_director(self, speech, language,  regex):
+    def get_rating(self, speech, language,  regex):
         if language == "en-US":
             MovieTitle = regex.group(regex.lastindex).strip()
             ia = IMDb()
