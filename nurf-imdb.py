@@ -3,6 +3,7 @@
 
 #IMDb Plugin for SiriServer
 #by Casey (Nurfballs) Mullineaux 
+# Version 0.2.1
 
 # Download: 
 #   - https://github.com/Nurfballs/SiriServer-IMDb
@@ -10,9 +11,6 @@
 # Pre-requisites:
 #   - Requires IMDbPy. 
 #       Install IMDbPY (sudo apt-get install python-imdbpy) or download it from http://imdbpy.sourceforge.net
-
-#Version 0.1 
-#   - Initial release
 
 # === Usage ===  
 # -- Get information about a movie --
@@ -26,6 +24,11 @@
 #-- Get the name of the actor who played a character in a movie or TV show--
 # (who played|who plays|who was)* ([\w ]+) *in* ([\w ]+)
 # Example: say "Who played Morpheus in The Matrix"
+
+#-- Recommend a  movie --
+# (should i see|should i watch)* ([\w ]+)
+# Example: say "Should i watch The Matrix?"
+
 
 # See README at https://github.com/Nurfballs/SiriServer-IMDb for full set of instructions.
 
