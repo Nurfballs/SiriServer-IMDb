@@ -69,6 +69,10 @@ Example: say `Should I see The Matrix?` etc.
 
 Version History
 ----------------
+**0.2.1**
+
+* Fixed a bug with the get director command.
+
 **0.2**
 
 * Added recommendation of a movie based on ratings.
